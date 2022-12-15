@@ -24,14 +24,6 @@ public class ProductsRestService {
 	public List<ProductModel> getProductssAsJson() {
 		return service.getProducts();
 	}
-
-	// maps to getxml and prints out the products to a xml page on the webpage
-	@GetMapping(path = "/getxml", produces = { MediaType.APPLICATION_XML_VALUE })
-	public ProductList getProductsAsXml() {
-		ProductList list = new ProductList();
-		list.setProducts(service.getProducts());
-		return list;
-	}
 	
 	 @GetMapping(path = "/getproduct/{productId}", produces = { MediaType.APPLICATION_JSON_VALUE })
      public List<ProductModel> getOneProductAsJSON(@PathVariable("productId") int productId) {

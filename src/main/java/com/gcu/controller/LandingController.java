@@ -60,7 +60,7 @@ public class LandingController
 	 * @param model         Model
 	 * @return createProduct or exception
 	 */
-	@GetMapping("/doCreate")
+	@PostMapping("/doCreate")
 	public String doCreate(@Valid ProductModel productModel, BindingResult bindingResult, Model model) {
 		try {
 
