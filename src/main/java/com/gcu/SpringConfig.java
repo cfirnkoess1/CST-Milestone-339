@@ -2,6 +2,7 @@ package com.gcu;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 
@@ -17,6 +18,7 @@ import groovy.lang.Singleton;
 @Configuration
 public class SpringConfig 
 {
+	@Primary
 	@Bean(name = "ProductsBusinessService", initMethod = "init", destroyMethod = "destroy")
 	public ProductsBusinessServiceInterface getProductsBusiness() {
 		return new ProductsBusinessService();
