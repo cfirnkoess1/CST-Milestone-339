@@ -35,7 +35,7 @@ public class LandingController
 	 * @param Id          Integer
 	 * @return string of exception or orders
 	 */
-	@PostMapping("/doProducts")
+	@GetMapping("/doProducts")
 	public String doProducts(ProductList productList, Model model,
 			@RequestParam(value = "id", required = false) Integer Id) {
 		try {
