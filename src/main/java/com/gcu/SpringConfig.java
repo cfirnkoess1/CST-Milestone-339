@@ -18,6 +18,11 @@ import groovy.lang.Singleton;
 @Configuration
 public class SpringConfig 
 {
+	/**
+	 * bean for products business service inteface
+	 * contract between classes
+	 * @return
+	 */
 	@Primary
 	@Bean(name = "ProductsBusinessService", initMethod = "init", destroyMethod = "destroy")
 	public ProductsBusinessServiceInterface getProductsBusiness() {

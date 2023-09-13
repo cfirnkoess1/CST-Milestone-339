@@ -26,6 +26,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     //BCryptPasswordEncoder passwordEncoder;
 
 
+    /**
+     * Method uses a SQL statemtn to access the database and make sure that the user enters a valid
+     * username and password
+     * @param auth
+     * @throws Exception
+     */
     @Autowired
     public void configAuthentication (AuthenticationManagerBuilder auth) throws Exception 
     { 
@@ -37,6 +43,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 
         System.out.println("==========>" +  new BCryptPasswordEncoder().encode("Jacobsen"));
     }
+    
+    /**
+     * Method for the basic authentication and http basic auth
+     * @param http
+     * @throws Exception
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception 
     {
