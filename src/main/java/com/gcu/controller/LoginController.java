@@ -109,7 +109,7 @@ public class LoginController {
 	 * @param signup        SignupModel
 	 * @return string of exception or welcome
 	 */
-	@GetMapping("/doLogin")
+	@PostMapping("/doLogin")
 	public String doLogin(@Valid LoginModel loginModel, BindingResult bindingResult, Model model, SignupModel signup) {
 		try {
 

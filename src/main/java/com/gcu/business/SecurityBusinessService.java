@@ -2,6 +2,7 @@ package com.gcu.business;
 
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class SecurityBusinessService {
 	public boolean authenticateLogin(String username, String password) {

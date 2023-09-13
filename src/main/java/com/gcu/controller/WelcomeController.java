@@ -16,7 +16,7 @@ public class WelcomeController
 	 * @param model model
 	 * @return string of exception or welcome
 	 */
-	@PostMapping("/")
+	@GetMapping("/")
 	public String display(Model model) 
 	{
 		try 
